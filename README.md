@@ -9,3 +9,5 @@ These tools will generally be aimed towards architects looking to get more out o
 
 # Feature requests
 Whilst the author can't guarantee they'll be able to add everything and anything, feel free to add tool/script ideas on the github or by contacting aussiebimguru@gmail.com.
+
+Read more at the wiki here: https://github.com/aussieBIMguru/pyRoovit/wiki
