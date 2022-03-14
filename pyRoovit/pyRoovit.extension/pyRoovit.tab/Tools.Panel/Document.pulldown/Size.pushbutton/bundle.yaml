@@ -1,0 +1,7 @@
+tooltip: Tries to return the current model size in MB.
+
+title: >-
+  Report model size (in MB)
+
+author: >-
+  Gavin Crump
