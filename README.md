@@ -12,7 +12,9 @@ Whilst the author can't guarantee they'll be able to add everything and anything
 
 Read more at the wiki here: https://github.com/aussieBIMguru/pyRoovit/wiki
 
-# Install
+# Directly Installing pyRoovit
+The following method can be used to avoid installing pyRevit via the Settings menu from within Revit itself, and might be beneficial to automate company related installation process' as well. Thanks to Jean-Marc Couffin for suggesting/helping write this section!
+
 1. Install pyRevit from https://github.com/eirannejad/pyRevit/releases
 2. WIN+R, then type 'cmd'
 3. In the command line, install the extension with the following command pyrevit extend ui pyRoovit https://github.com/aussieBIMguru/pyRoovit.git --dest="C:\thePathWhereYouWantItInstalled" --branch=main
