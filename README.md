@@ -11,3 +11,9 @@ These tools will generally be aimed towards architects looking to get more out o
 Whilst the author can't guarantee they'll be able to add everything and anything, feel free to add tool/script ideas on the github or by contacting aussiebimguru@gmail.com.
 
 Read more at the wiki here: https://github.com/aussieBIMguru/pyRoovit/wiki
+
+# Install
+1. Install pyRevit from https://github.com/eirannejad/pyRevit/releases
+2. WIN+R, then type 'cmd'
+3. In the command line, install the extension with the following command pyrevit extend ui pyRoovit https://github.com/aussieBIMguru/pyRoovit.git --dest="C:\thePathWhereYouWantItInstalled" --branch=main
+4. If Revit was opened, use the reload button of pyRevit
