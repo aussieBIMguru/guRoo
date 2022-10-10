@@ -1,0 +1,8 @@
+context: doc-project
+
+title: Viewports by sheets
+
+tooltip: Removes viewports from selected sheets.
+
+author: >-
+  Gavin Crump

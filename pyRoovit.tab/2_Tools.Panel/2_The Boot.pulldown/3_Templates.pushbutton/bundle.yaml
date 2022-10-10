@@ -1,0 +1,8 @@
+context: doc-project
+
+title: Unused View Templates
+
+tooltip: Purges selected unused View Templates.
+
+author: >-
+  Gavin Crump
