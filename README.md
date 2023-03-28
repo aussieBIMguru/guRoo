@@ -15,3 +15,8 @@ The following method can be used to avoid installing pyRevit via the Settings me
 2. WIN+R, then type 'cmd'
 3. In the command line, install the extension with the following command pyrevit extend ui guRoo https://github.com/aussieBIMguru/guRoo.git --dest="C:\thePathWhereYouWantItInstalled" --branch=main
 4. If Revit was opened, use the reload button of pyRevit
+
+# Manually installing guRoo
+If you want to quickly set up guRoo yourself, you can simply add it to your Roaming folder like below (reach this by typing %appdata% into the explorer address bar), and copy the contents of this git to that folder instead of using the CLI method above. For basic users this is generally the recommended approach:
+
+![guRoo path](https://user-images.githubusercontent.com/58870499/228242863-d85d1583-4da9-40cb-b869-42231d4cee75.PNG)
