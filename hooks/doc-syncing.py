@@ -4,7 +4,6 @@ from guRoo_msgUtils import *
 
 # import libraries
 from datetime import datetime
-import math
 
 # get the time
 time = datetime.now()

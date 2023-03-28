@@ -5,7 +5,7 @@ import os, datetime
 
 # get print directory
 def expUtils_getDir():
-	dp = os.path.expanduser("\\Xport")
+	dp = os.path.expanduser("\\guRoo Exports")
 	return dp
 
 # make subfolder extension
