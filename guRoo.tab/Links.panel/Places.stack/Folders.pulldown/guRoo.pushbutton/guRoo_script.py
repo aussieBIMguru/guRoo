@@ -1,13 +1,14 @@
 # import libraries
 import clr
 import os
+from pyrevit import script
 
 # Get and build the pyrevit path
-userProfile = os.environ.get("USERPROFILE")
-prvPath = userProfile + '\\AppData\\Roaming\\guRoo\\'
+curPath = script.get_script_path()
+remPath = curPath.split('Panel.extension')[0]
 
 # Load the path
 try:
-	os.startfile(prvPath)
+	os.startfile(remPath)
 except:
 	pass
