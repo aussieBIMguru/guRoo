@@ -1,0 +1,13 @@
+context:
+    not_any:
+    - active-sheet
+    - active-legend
+    - active-schedule
+    - active-3d-view
+    - doc-family
+
+title: The parent of this view
+
+tooltip: Takes you to the parent/primary view of the active one.
+
+author: Gavin Crump

@@ -1,0 +1,10 @@
+context:
+    not_any:
+    - doc-family 
+
+title: CAD Links/Imports
+
+tooltip: Makes a report of the CAD obkects in the current document.
+
+author: >-
+  Gavin Crump

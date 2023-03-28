@@ -1,0 +1,7 @@
+context: selection
+
+title: Deselect grouped elements
+
+tooltip: Deselect any elements in your selection that belong to a group, or are a group.
+
+author: Gavin Crump

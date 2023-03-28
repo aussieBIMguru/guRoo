@@ -1,8 +1,0 @@
-context: doc-project
-
-title: Unplaced views
-
-tooltip: Purge views not on sheets which have no dependencies on views on sheets as well (dependent/callout etc.).
-
-author: >-
-  Gavin Crump

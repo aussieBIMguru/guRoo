@@ -1,0 +1,7 @@
+layout:
+  - Select
+  - Revisions
+  - Worksets
+  - Find
+  - Audit
+  - BulkExport

@@ -1,8 +1,0 @@
-title: Pouch
-
-tooltip: Store, open or forget folder paths with nicknames.
-
-layout:
-  - 0_Open
-  - 1_Add
-  - 2_Remove

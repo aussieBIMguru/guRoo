@@ -1,0 +1,9 @@
+context:
+  - doc-project
+  - selection
+
+title: Same type as selected
+
+tooltip: Select elements in the active view of the same types as selected elements.
+
+author: Gavin Crump

@@ -1,8 +1,0 @@
-context: doc-project
-
-title: Problematic Rooms
-
-tooltip: Removes selected unplaced, unenclosed or redundant rooms.
-
-author: >-
-  Gavin Crump

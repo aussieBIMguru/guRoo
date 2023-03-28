@@ -1,0 +1,7 @@
+context: doc-workshared
+
+title: Create using Excel file
+
+tooltip: Create worksets using an Excel file. Put your values in a single column with no headers, and do not change the worksheet name from Sheet1.
+
+author: Gavin Crump

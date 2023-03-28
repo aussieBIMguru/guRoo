@@ -1,0 +1,7 @@
+context: doc-project
+
+title: Unplaced Views
+
+tooltip: Purges unplaced views from a list. Takes into account parent/primary view relationships to ensure unplaced views with placed, dependent views do not appear in the list.
+
+author: Gavin Crump

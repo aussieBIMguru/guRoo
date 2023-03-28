@@ -1,0 +1,9 @@
+context:
+    not_any:
+    - doc-family 
+
+title: Model/detail groups
+
+tooltip: Makes a report of groups in the current document.
+
+author: Gavin Crump

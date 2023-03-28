@@ -1,0 +1,7 @@
+context: zero-doc
+
+title: Store
+
+tooltip: Stores something in the pouch (either a folder path or URL).
+
+author: Gavin Crump

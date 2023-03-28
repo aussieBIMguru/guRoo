@@ -1,0 +1,7 @@
+context: doc-project
+
+title: Imported patterns
+
+tooltip: Purges fill or line patterns from a list if they contain the word IMPORT in their name.
+
+author: Gavin Crump

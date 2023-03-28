@@ -1,0 +1,8 @@
+context: doc-workshared
+
+title: Create using BIM Guru system
+
+tooltip: Select worksets using the BIM Guru standard. Will offer to rename Shared Levels and Grids if detected.
+
+author: >-
+  Gavin Crump

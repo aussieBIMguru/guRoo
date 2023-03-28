@@ -1,0 +1,16 @@
+context: doc-project
+
+layout:
+  - SelCat
+  - SelType
+  - SelTtbs
+  - ---
+  - PreMulti
+  - Pre3D
+  - Pre2D
+  - ---
+  - DeGroup
+
+title: select
+
+author: Gavin Crump

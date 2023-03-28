@@ -1,0 +1,7 @@
+context: doc-project
+
+title: Sheet set by revision
+
+tooltip: Creates a sheet set from all sheets with a chosen revision.
+
+author: Gavin Crump
