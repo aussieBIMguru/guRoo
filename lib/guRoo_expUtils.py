@@ -34,7 +34,7 @@ def expUtils_canPrint():
 	rvt_year = int(app.VersionNumber)
 	# Check that version is 2022 or higher
 	if rvt_year < 2022:
-		forms.alert("Export PDF is only available in Revit 2022 or higher.", title= "Script cancelled")
+		forms.alert("Only available in Revit 2022 or later.", title= "Script cancelled")
 		script.exit()
 	else:
 		return True

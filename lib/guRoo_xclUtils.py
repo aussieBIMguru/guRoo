@@ -20,6 +20,7 @@ from Microsoft.Office.Interop import Excel
 from System.Runtime.InteropServices import Marshal
 
 # Excel utility class
+# Thanks Cyril Poupin for most of this code with some tweaks...
 class xclUtils():
 	
 	def __init__(self, lstData, filepath):
