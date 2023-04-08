@@ -4,6 +4,8 @@ layout:
   - ViewImage
   - ViewsDWG
   - ----
+  - ScheduleXcl
+  - ----
   - SheetsPDF
   - SheetsDWG
   - SheetsBoth

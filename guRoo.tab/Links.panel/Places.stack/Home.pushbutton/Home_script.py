@@ -1,5 +1,5 @@
 # import pyrevit libraries
-from pyrevit import revit,DB,forms
+from pyrevit import revit,DB
 
 # get document
 doc = revit.doc
@@ -7,20 +7,16 @@ uidoc = revit.uidoc
 
 # get start view
 startView   = DB.StartingViewSettings.GetStartingViewSettings(doc)
+
+# try to get home view
 try:
 	startViewId = startView.ViewId
+	targetView = doc.GetElement(startViewId)
 except:
-	startViewId = 0
+	targetView = None
 
 curView  = doc.ActiveView
 
-# If no ttb found, give up
-if startViewId != 0 and curView.Id != startViewId:
-	uidoc.RequestViewChange(doc.GetElement(startViewId))
-	allViews = uidoc.GetOpenUIViews()
-	for v in allViews:
-		if v.ViewId != startViewId:
-			try:
-				v.Close()
-			except:
-				pass
+# If not active, open the view
+if targetView != None:
+	uidoc.RequestViewChange(targetView)

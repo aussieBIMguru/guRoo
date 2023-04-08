@@ -1,12 +1,11 @@
 # import pyrevit libraries
 from pyrevit import forms,revit,DB,script
-from guRoo_delUtils import *
 
 # create custom message class based on view object
-class ViewsToPurge(forms.TemplateListItem):
-    @property
-    def name(self):
-        return self.item.Name
+class ViewToPurge(forms.TemplateListItem):
+	@property
+	def name(self):
+		return self.item.Name
 
 # get document
 doc = revit.doc
@@ -37,41 +36,42 @@ with forms.ProgressBar(step=10, title="Checking templates assigned to views") as
 
 # Get element ids of view family type templates
 with forms.ProgressBar(step=1, title="Checking templates assigned to view family types") as pb2:
-    pb2Count = 1
-    pb2Length = len(vfts)
-    for vft in vfts:
-        tid = vft.DefaultTemplateId.IntegerValue
-        if tid not in templates_used and tid != -1:
-            templates_used.append(tid)
-        pb2.update_progress(pb2Count, pb2Length)
-        pb2Count += 1
+	pb2Count = 1
+	pb2Length = len(vfts)
+	for vft in vfts:
+		tid = vft.DefaultTemplateId.IntegerValue
+		if tid not in templates_used and tid != -1:
+			templates_used.append(tid)
+		pb2.update_progress(pb2Count, pb2Length)
+		pb2Count += 1
 
 # Find the template difference
 for vt in templates_all:
-    if vt not in templates_used:
-        templates_unused.append(DB.ElementId(vt))
+	if vt not in templates_used:
+		templates_unused.append(DB.ElementId(vt))
 
 # display primary UI if views found
 if not templates_unused:
-    forms.alert("No unused View templates found.", title= "Script completed", warn_icon=False)
+	forms.alert("No unused View templates found.", title= "Script completed", warn_icon=False)
 else:
-    # ask user for wipe actions
-    return_options = \
-        forms.SelectFromList.show(
-            [ViewsToPurge(revit.doc.GetElement(vt))
-            for vt in templates_unused],
-            title='Unused View templates',
-            width=500,
-            button_name='Delete',
-            multiselect=True
-            )
-    # if user selects view templates, attempt to delete them
-    # note: If the active view is a view templates, it may fail to delete
-    if return_options:
-        # Check elements are available
-        if doc.IsWorkshared:
-            from guRoo_shareUtils import *
-            checkOut = elements_editable(return_options,doc,True)
-            return_options = checkOut[1]
-        # Try to delete elements
-        delUtils_delEles(return_options,doc,pbTitle="Deleting View templates...")
+	# ask user for wipe actions
+	return_options = \
+		forms.SelectFromList.show(
+			[ViewToPurge(revit.doc.GetElement(vt))
+			for vt in templates_unused],
+			title='Unused View templates',
+			width=500,
+			button_name='Delete',
+			multiselect=True
+			)
+	# if user selects view templates, attempt to delete them
+	# note: If the active view is a view templates, it may fail to delete
+	if return_options:
+		# Check elements are available
+		if doc.IsWorkshared:
+			from guRoo_shareUtils import *
+			checkOut = shareUtils_getEditable(return_options,doc,True)
+			return_options = checkOut[1]
+		# Try to delete elements
+		from guRoo_delUtils import *
+		delUtils_delEles(return_options,doc,pbTitle="Deleting View templates...")

@@ -1,6 +1,5 @@
 # import pyrevit libraries
 from pyrevit import forms,revit,DB,script
-from guRoo_delUtils import *
 
 # get document
 doc = revit.doc
@@ -27,27 +26,28 @@ else:
 	
 	# Proceed if deletion given
 	if return_options:
-	
-		# Import worksharing utilities
-		from guRoo_shareUtils import *
 		
-		# If workshared document, check if elements are editable
-		# Note the user will be able to cancel the process if no-editable elements are found
+		# Make rooms from keys
+		getRooms = [doc.GetElement(delUtils_getFromKey(r)) for r in return_options]
+		
+		# Check elements are available
 		if doc.IsWorkshared:
-			checkOut = shareUtils_getEditable(return_options,doc,True)
-			return_options = checkOut[1]
+			from guRoo_shareUtils import *
+			checkOut = shareUtils_getEditable(getRooms,doc,True)
+			getRooms = checkOut[1]
 		
 		# Delete rooms
 		with forms.ProgressBar(step = 1, title='Deleting rooms... ' + '{value} of {max_value}', cancellable = True) as pb1:
-			pbTotal1 = len(return_options)
+			pbTotal1 = len(getRooms)
 			pbCount1 = 1
 			del_pass = 0
 			with revit.Transaction('Delete rooms'):
 				
-				for r in return_options:
+				from guRoo_delUtils import *
+				
+				for r in getRooms:
 					if not pb1.cancelled:
-						get_rm = delUtils_getFromKey(r)
-						del_pass += delUtils_delEle(get_rm, doc)
+						del_pass += delUtils_delEle(r, doc)
 						pb1.update_progress(pbCount1, pbTotal1)
 						pbCount1 += 1
 					else:

@@ -61,7 +61,7 @@ printMan.PrintRange = DB.PrintRange.Select
 viewSS   = printMan.ViewSheetSetting
 
 # make the new sheet set
-with revit.Transaction('Make sheet set'):
+with revit.Transaction('guRoo: Create sheet set'):
 	viewSS.CurrentViewSheetSet.Views = newSet
 	viewSS.SaveAs(proposedName)
 	forms.alert("New sheet set created.", title= "Script completed", warn_icon = False)

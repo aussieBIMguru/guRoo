@@ -1,0 +1,17 @@
+View:
+Views by type/level
+Working plans
+Scoped views
+Isolate warnings
+
+Import rooms
+
+Find/replace:
+- Family names (name)
+- System types (names)
+- Views (name, name on sheet)
+- Sheets (number, name)
+
+Families:
+Add parameters to families
+Replace parameters of families

@@ -39,7 +39,7 @@ if uprev:
 			pbTotal1 = len(return_options)
 			pbCount1 = 1
 			rev_pass = 0
-			with revit.Transaction('Uprev Sheets'):
+			with revit.Transaction('guRoo: Uprev sheets'):
 				for sht in return_options:
 					if not pb1.cancelled:
 						rev_pass += upRev(sht,uprev)

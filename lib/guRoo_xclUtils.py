@@ -19,6 +19,14 @@ except:
 from Microsoft.Office.Interop import Excel
 from System.Runtime.InteropServices import Marshal
 
+# Force int or string
+def xclUtils_strFix(s):
+	try:
+		fix = str(int(s))
+	except:
+		fix = str(s)
+	return fix
+
 # Excel utility class
 # Thanks Cyril Poupin for most of this code with some tweaks...
 class xclUtils():

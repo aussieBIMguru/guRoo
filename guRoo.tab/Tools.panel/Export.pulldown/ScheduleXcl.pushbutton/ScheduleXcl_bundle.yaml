@@ -1,0 +1,8 @@
+context:
+  - active-schedule
+
+title: Schedule to Excel
+
+tooltip: Exports the active schedule view to Excel.
+
+author: Gavin Crump

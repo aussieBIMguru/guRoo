@@ -1,5 +1,5 @@
 # import pyrevit libraries
-from pyrevit import revit,DB,script,forms
+from pyrevit import revit,DB,forms
 
 # get document
 doc = revit.doc
