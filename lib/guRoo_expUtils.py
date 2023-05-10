@@ -51,7 +51,7 @@ def expUtils_nameSheet(s):
 	from guRoo_strUtils import *
 	# make sheet name
 	preName = s.SheetNumber + "[" + curNum + "] -" + s.Name
-	shtName = legalize(preName)
+	shtName = strUtils_legalize(preName)
 	return shtName
 
 # make view name for print
