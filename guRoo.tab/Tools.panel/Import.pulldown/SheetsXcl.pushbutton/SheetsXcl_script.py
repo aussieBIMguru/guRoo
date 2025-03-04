@@ -35,8 +35,8 @@ dat = xcl.xclUtils_import("Sheet1",2,0)
 if dat[1]:
 	sheetNumbers, sheetNames, sheetSeries, sheetSets = [],[],[],[]
 	for row in dat[0][1:]:
-		sheetNumbers.append(xclUtils_strFix(row[0]))
-		sheetNames.append(xclUtils_strFix(row[1]))
+		sheetNumbers.append(row[0])
+		sheetNames.append(row[1])
 else:
 	forms.alert("Data not found. Make sure Excel is closed, and on Sheet1 as per the template.", title= "Script cancelled")
 	script.exit()
